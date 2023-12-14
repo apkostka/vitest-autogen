@@ -2,7 +2,7 @@ import * as ts from 'typescript';
 import { ParsedSourceFile, ParsedClass, ParsedPojo, ParsedReactComponent, ParsedReactProp, ParsedPropTypePojo } from './model';
 import debugFactory from 'debug';
 
-const debug = debugFactory('jest-test-gen/parse-source-file');
+const debug = debugFactory('vitest-autogen/parse-source-file');
 const isNodeJSX = (node: ts.Node) => [
   ts.SyntaxKind.JsxElement, 
   ts.SyntaxKind.JsxFragment, 

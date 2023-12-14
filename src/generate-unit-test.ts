@@ -7,7 +7,7 @@ import { basename, extname } from 'path';
 import { readFileSync } from 'fs';
 import debugFactory from 'debug';
 
-const debug = debugFactory('jest-test-gen/generate-unit-test');
+const debug = debugFactory('vitest-autogen/generate-unit-test');
 
 const cleanupImportPathName = (rawImportPath: string) => rawImportPath.toLowerCase().replace(/(\'|\")/g, '');
 export function generateUnitTest(path: string, _sourceCode: string, input: ParsedSourceFile) {

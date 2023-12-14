@@ -13,13 +13,13 @@ Parsing and test generation is avaialable for the following exports:
 * Exported POJOs with methods
 * Async functions and methods
 
-This tool will take a js/ts file as input and generate a jest unit test file next to it with all imports mocked and tests stubs for every class method and function exported.
+This tool will take a ts file as input and generate a jest unit test file next to it with all imports mocked and tests stubs for every class method and function exported.
 
 This project is inspired and started as a fork of [jest-test-gen](https://github.com/egm0121/jest-test-gen), which itself is a fork of [jasmine-unit-test-generator](https://github.com/FDIM/jasmine-unit-test-generator). However, this focuses on several changes:
 
- * Allowing using custom templates so you can generate tests for whichever test framework you like
  * Adds default templates for vite/vitest
- * Remove functionality for React to focus on JS/TS generation
+ * Only uses Typescript as input
+ * Remove functionality for React to focus on TS generation
 
 ## Usage
 
@@ -35,7 +35,7 @@ run `vitest-autogen <path-to-file>`
 
 It's probably best to:
 
-* add an input file in `spec/fixtures` folder test.js
+* add an input file in `spec/fixtures` folder test.ts
 * add a snapshot test for the input spec in `integration.spec.ts`
 * verify that the snapshot is actually the wanted test output before commiting the updated snapshot.
 

@@ -14,7 +14,7 @@ export function run(args: minimist.ParsedArgs, opts?: TRunOptions) {
   if (!args._.length) {
     // tslint:disable-next-line:no-console
     console.error('missing path argument');
-    console.error('USAGE: jest-test-gen <path-to-file> --outputDir ./my/custom/output --fileSuffix .generated.test')
+    console.error('USAGE: vitest-autogen <path-to-file> --outputDir ./my/custom/output --fileSuffix .generated.test')
     process.exit(1);
   }
 
