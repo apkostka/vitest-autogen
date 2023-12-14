@@ -1,22 +1,13 @@
-# JestTestGen
-![badgenpm](https://img.shields.io/npm/dm/jest-test-gen.svg) ![badgenpm](https://img.shields.io/npm/v/jest-test-gen.svg)
-
-## 🚀 Try jest-test-gen as a VS Code Extension
-
-**The VS Code extension is the fastest way to generate a unit test file from a source file directly from the IDE**
-
-[Install jest-test-gen Extension](https://marketplace.visualstudio.com/items?itemName=com-egm0121.vs-jest-test-gen)
+# Vitest AutoGen
+![badgenpm](https://img.shields.io/npm/dm/vitest-autogen.svg) ![badgenpm](https://img.shields.io/npm/v/vitest-autogen.svg)
 
 ## About
 
-Automates creation of initial unit test files taking dependencies into account.
+Automates creation of initial unit test files for vite/vitest, taking dependencies into account.
 
 Parsing and test generation is avaialable for the following exports:
 
-* Typescript typed React class components 🆕
 * Typescript typed Functional components 🆕
-* React Functional components 🆕
-* React Class based components 🆕
 * ES6 Classes default export or named exports
 * Exported named functions and arrow functions
 * Exported POJOs with methods
@@ -24,28 +15,21 @@ Parsing and test generation is avaialable for the following exports:
 
 This tool will take a js/ts file as input and generate a jest unit test file next to it with all imports mocked and tests stubs for every class method and function exported.
 
-This project is inspired and started as a fork of [jasmine-unit-test-generator](https://github.com/FDIM/jasmine-unit-test-generator)
+This project is inspired and started as a fork of [jest-test-gen](https://github.com/egm0121/jest-test-gen), which itself is a fork of [jasmine-unit-test-generator](https://github.com/FDIM/jasmine-unit-test-generator). However, this focuses on several changes:
 
-## Preview
-
-Basic ES6 Class example: 
-
-![Basic](./assets/demo.jpg)
-
-React Component example:
-
-![ReactComponent](./assets/component.jpg)
+ * Allowing using custom templates so you can generate tests for whichever test framework you like
+ * Adds default templates for vite/vitest
+ * Remove functionality for React to focus on JS/TS generation
 
 ## Usage
 
 ### Installation
 
-run `npm i -g jest-test-gen`
+run `npm i -g vitest-autogen`
 
 ### Basic Usage
 
-run `jest-test-gen <path-to-file>`
-
+run `vitest-autogen <path-to-file>`
 
 ## Development
 
@@ -59,7 +43,7 @@ Alternavely, you can:
 
 * run `npm link`
 * run `npm run build:dev`
-* run `jest-test-gen <option>` in your project of choice
+* run `vitest-autogen <option>` in your project of choice
 
 ## Release
 run `npm run build`
