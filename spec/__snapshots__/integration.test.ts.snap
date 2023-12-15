@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// vitest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`integration component class based - default export should match snapshot 1`] = `
 "import renderer from 'react-test-renderer';
@@ -28,7 +28,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { CallTimer } from './classComponent';
 
-jest.mock('react-redux');
+vi.mock('react-redux');
 
 const renderTree = tree => renderer.create(tree);
 describe('<CallTimer>', () => {
@@ -136,10 +136,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import defaultExportAssignement from './defaultExportAssignement';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('defaultExportAssignement', () => {
   it('should expose a function', () => {
@@ -160,10 +160,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import helloDefFunc from './defaultExportIdentifier';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('helloDefFunc', () => {
   it('should expose a function', () => {
@@ -184,10 +184,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { helloNamedFunction, helloAsFunction } from './namedExportDefinition';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('helloNamedFunction', () => {
   it('should expose a function', () => {
@@ -218,10 +218,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { helloAssignedArrowFunction, helloAssignedFunctionExpression, myAsyncAssignedFunc } from './namedExportVariableStatement';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('helloAssignedArrowFunction', () => {
   it('should expose a function', () => {
@@ -262,10 +262,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import myPojo from './defaultExportIdentifier';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('myPojo', () => {
   
@@ -289,10 +289,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { myPojo } from './namedExportAssignement';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('myPojo', () => {
   
@@ -316,10 +316,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { myPojo } from './namedExportIdentifier';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('myPojo', () => {
   
@@ -343,10 +343,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import MyDemoClass from './defaultExportIdentifier';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('MyDemoClass', () => {
   let instance;
@@ -378,10 +378,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import DefaultExportStaticMethod from './defaultExportStaticMethod';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('DefaultExportStaticMethod', () => {
   let instance;
@@ -413,10 +413,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import DefaultExportAssignment from './defaultExportAssignment';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('DefaultExportAssignment', () => {
   let instance;
@@ -448,10 +448,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { MyDemoClass, myTestHelper } from './namedExportClassDefinition';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('MyDemoClass', () => {
   let instance;
@@ -504,10 +504,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { MyDemoClass } from './namedExportIdentifier';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('MyDemoClass', () => {
   let instance;
@@ -539,10 +539,10 @@ import myDefaultExport, { myNamedExport } from 'moduleThree/deep/file';
 import helpers from './local/helpers';
 import { MyVarClass } from './namedExportVariableDeclaration';
 
-jest.mock('moduleOne');
-jest.mock('moduleTwo');
-jest.mock('moduleThree/deep/file');
-jest.mock('./local/helpers');
+vi.mock('moduleOne');
+vi.mock('moduleTwo');
+vi.mock('moduleThree/deep/file');
+vi.mock('./local/helpers');
 
 describe('MyVarClass', () => {
   let instance;

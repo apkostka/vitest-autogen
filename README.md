@@ -5,15 +5,7 @@
 
 Automates creation of initial unit test files for vite/vitest, taking dependencies into account.
 
-Parsing and test generation is avaialable for the following exports:
-
-* Typescript typed Functional components 🆕
-* ES6 Classes default export or named exports
-* Exported named functions and arrow functions
-* Exported POJOs with methods
-* Async functions and methods
-
-This tool will take a ts file as input and generate a jest unit test file next to it with all imports mocked and tests stubs for every class method and function exported.
+This tool will take a ts file as input and generate a vitest unit test file next to it with all imports mocked and tests stubs for every class method and function exported.
 
 This project is inspired and started as a fork of [jest-test-gen](https://github.com/egm0121/jest-test-gen), which itself is a fork of [jasmine-unit-test-generator](https://github.com/FDIM/jasmine-unit-test-generator). However, this focuses on several changes:
 

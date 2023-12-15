@@ -1,13 +1,14 @@
 import checkPackageUpdates from './updateVersionBanner';
 import { run } from './main'
 import './cli'
+import { describe, expect, it, vi } from 'vitest';
 
-jest.mock('./updateVersionBanner', () => ({
-  default: jest.fn(),
+vi.mock('./updateVersionBanner', () => ({
+  default: vi.fn(),
   __esModule: true
 }));
-jest.mock('./main', () => ({
-  run: jest.fn(),
+vi.mock('./main', () => ({
+  run: vi.fn(),
 }));
 
 describe('cli', () => {

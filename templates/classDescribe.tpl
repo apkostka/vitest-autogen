@@ -1,5 +1,5 @@
 <% if(parsedSource.exportClass) {%>describe('<%=parsedSource.exportClass.name %>', () => {
-  let <%=instanceVariableName %>;
+  let <%=instanceVariableName %>: <%=parsedSource.exportClass.name %>;
 
   beforeEach(() => {
     <%=instanceVariableName %> = new <%=parsedSource.exportClass.name %>();

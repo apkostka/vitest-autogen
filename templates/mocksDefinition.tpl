@@ -1,2 +1,2 @@
-<% allMocks.forEach(function(value) { %>jest.mock(<%=value.path%>);
+<% allMocks.forEach(function(value) { %>vi.mock(<%=value.path%>);
 <% }) %>

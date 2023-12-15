@@ -1,5 +1,5 @@
 {
-  "name": "vitest-autogen",
+  "name": "@nrfcloud/vitest-autogen",
   "version": "1.4.3",
   "description": "Generator of vite/vitest unit tests with all imports mocked and tests stub for every class and function exported",
   "keywords": [
@@ -21,27 +21,60 @@
     "build:dev": "tsc --watch",
     "build": "tsc",
     "dev": "ts-node ./src/cli.ts",
-    "test": "vitest",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf coverage reports node_modules/.cache/turbo && pnpm clean:turbo && pnpm turbo clean:single",
+    "clean:turbo": "rm -rf node_modules/.cache/turbo",
+    "lint": "dprint check && eslint packages/* --no-error-on-unmatched-pattern --cache && syncpack-list-mismatches",
+    "lint:fix": "dprint fmt && eslint packages/* --no-error-on-unmatched-pattern --fix && syncpack-fix-mismatches && syncpack-format",
+    "prepare": "ts-patch install && husky install",
+    "release": "pnpm lint && pnpm build:clean && changeset publish",
+    "test": "USE_COMPILED_TESTS=true compile && USE_COMPILED_TESTS=true vitest --run --reporter=basic --reporter=junit --outputFile.junit=coverage/junit.xml"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com:apkostka/vitest-autogen.git"
+    "url": "ssh://git@github.com:nrfcloud/vitest-autogen.git"
   },
   "author": "egm0121",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@nrfcloud/templates": "^1.4.0",
+    "@nrfcloud/utils.public.eslint": "1.1.0",
+    "@rollup/plugin-typescript": "~11.1.2",
     "@types/debug": "^4.1.12",
-    "@types/jest": "^28.1.8",
+    "@types/eslint": "^8.40.0",
     "@types/lodash": "^4.14.202",
     "@types/minimist": "^1.2.5",
-    "@types/node": "^11.15.54",
-    "ts-node": "^10.9.2"
+    "@types/node": "^18.16.16",
+    "@vitest/ui": "^0.33.0",
+    "compare-versions": "^4.1.4",
+    "debug": "4.3.2",
+    "latest-version": "^5.1.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4",
+    "deepmerge": "^4.3.1",
+    "dprint": "^0.34.5",
+    "esbuild": "^0.18.17",
+    "eslint": "^8.45.0",
+    "husky": "^8.0.3",
+    "jsonwebtoken": "^9.0.0",
+    "plop": "^3.1.2",
+    "syncpack": "^9.8.6",
+    "ts-patch": ">=3.0.2",
+    "turbo": "^1.10.10"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=6.32.4"
   },
   "bin": {
     "vitest-autogen": "./lib/cli.js"
   },
   "dependencies": {
+    "@vitest/coverage-v8": "^1.0.4",
     "@changesets/cli": "^2.27.1",
     "compare-versions": "^4.1.4",
     "debug": "4.3.2",
